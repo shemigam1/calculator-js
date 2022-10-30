@@ -1,61 +1,66 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-  font-family: Georgia, "Times New Roman", Times, serif;
-  font-weight: bold;
-}
-
-body {
-  padding: 0;
+* {
   margin: 0;
-  background: linear-gradient(to bottom, #00aaff, #00ffcc);
+  padding: 0;
 }
 
-.calculator-grid {
+.calculator {
+  background: #101010;
+  width: 25em;
+  margin: 5em auto;
+}
+
+.display {
+  background: #222;
+  color: #fff;
+  text-align: right;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.7em;
+  height: 6em;
+  line-height: 8em;
+  padding: 0 1.5em;
+}
+
+.controls {
   display: grid;
-  justify-content: center;
-  align-content: center;
-  min-height: 100vh;
-  grid-template-columns: repeat(4, 100px);
-  grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+  grid-template-columns: repeat(4, 1fr);
+  padding: 0.7em 0;
+  margin: auto 0.5em;
 }
 
-.calculator-grid > button {
+.controls button {
+  background: #222;
+  color: #fff;
+  height: 5.5em;
   cursor: pointer;
-  font-size: 25px;
-  border: 1px solid #fff;
-  outline: none;
-  background-color: rgba(255, 255, 255, 0.75);
+  margin: 0.5em;
+  border: unset;
+  border-radius: 0.5em;
+  outline: unset;
 }
-
-.calculator-grid > button:hover {
-  background-color: rgba(255, 255, 255, 0.9);
-}
-
 .span-two {
   grid-column: span 2;
 }
-
-.output {
-  grid-column: 1 / -1;
-  background-color: rgba(0, 0, 0, 0.75);
-  color: white;
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-around;
-  flex-direction: column;
-  padding: 12px;
-  word-wrap: break-word;
-  word-wrap: break-all;
+.controls button:hover {
+  color: #333;
+  background: #999;
 }
 
-.output .prev-op {
-  color: rgba(225, 225, 255, 0.75);
-  font-size: 25px;
+.controls button:active {
+  transform: translateY(0.5em);
 }
 
-.output .current-op {
-  color: white;
-  font-size: 35px;
+.controls .op {
+  background: #005755;
+}
+
+.contols .op:hover {
+  background: #006664;
+}
+
+@media screen and (max-width: 768px) {
+  .calculator {
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+  }
 }

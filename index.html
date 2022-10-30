@@ -4,34 +4,37 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Calculator</title>
+    <title>Document</title>
     <link rel="stylesheet" href="style.css" />
-    <script src="app.js" defer></script>
   </head>
   <body>
-    <div class="calculator-grid">
-      <div class="output">
-        <div id="data-prev-op" class="prev-op"></div>
-        <div id="data-current-op" class="current-op"></div>
+    <div class="calculator">
+      <div class="display"></div>
+      <div class="controls">
+
+        <button class="op span-two">AC</button>
+        <!-- <button class="op"></button> -->
+        <button class="op button">%</button>
+        <button class="op button">+</button>
+        <button class="button">7</button>
+        <button class="button">8</button>
+        <button class="button">9</button>
+        <button class="op button">-</button>
+        <button class="button">4</button>
+        <button class="button">5</button>
+        <button class="button">6</button>
+        <button class="op button">x</button>
+        <button class="button">1</button>
+        <button class="button">2</button>
+        <button class="button">3</button>
+        <button class="op button">&#247;</button>
+        <button class="button">0</button>
+        <button class="op button">.</button>
+        <!-- <button class="op"></button> -->
+        <button class="op span-two button">=</button>
       </div>
-      <button class="span-two" id="data-all-clear">AC</button>
-      <button id="data-delete">DEL</button>
-      <button id="data-operation">&#247;</button>
-      <button id="data-number">1</button>
-      <button id="data-number">2</button>
-      <button id="data-number">3</button>
-      <button id="data-operation">x</button>
-      <button id="data-number">4</button>
-      <button id="data-number">5</button>
-      <button id="data-number">6</button>
-      <button id="data-operation">+</button>
-      <button id="data-number">7</button>
-      <button id="data-number">8</button>
-      <button id="data-number">9</button>
-      <button id="data-operation">-</button>
-      <button id="data-number">.</button>
-      <button id="data-number">0</button>
-      <button class="span-two" id="data-equals">=</button>
     </div>
+    </div>
+    <script src="./app.js"></script>
   </body>
 </html>
