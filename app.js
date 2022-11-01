@@ -1,6 +1,6 @@
 const display = document.querySelector(".display");
 const controlButtons = document.querySelector(".controls").children;
-const allSymbols = ["+", "-", "x", "%", "AC", "=", "&#247;"];
+const allSymbols = ["+", "-", "x", "%", "AC", "=", "/"];
 
 let firstValue = "";
 let secondValue = "";
@@ -14,7 +14,7 @@ const calculate = () => {
   if (symbol === "+") result = firstValue + secondValue;
   if (symbol === "-") result = firstValue - secondValue;
   if (symbol === "x") result = firstValue * secondValue;
-  if (symbol === "&#247;") result = firstValue / secondValue;
+  if (symbol === "/") result = firstValue / secondValue;
   if (symbol === "%") result = firstValue % secondValue;
 
   display.innerText = result;
